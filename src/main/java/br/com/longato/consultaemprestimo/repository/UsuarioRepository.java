@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
     @Query("SELECT e FROM User e JOIN FETCH e.roles WHERE e.email= (:email)")
-    public Usuario findByEmail(@Param("email") String email);
+    Usuario findByEmail(@Param("email") String email);
 
     boolean existsByUsername(String email);
 }
