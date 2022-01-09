@@ -3,6 +3,7 @@ package br.com.longato.consultaemprestimo.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +11,10 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table
+@Table(name = "user")
 @Builder
 @Entity
-public class Usuario {
+public class User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
